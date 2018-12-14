@@ -1,0 +1,32 @@
+@import "SaleReturn";
+@import "Custom";
+@import "InvoiceExplain";
+
+#RrightContent{
+  #ClassContent{
+    .titleFont{
+      margin-bottom: 20px;
+    }
+    .P_btn{
+      margin-bottom: 20px;
+      margin-left: 15px;
+    }
+    .P_Content{
+      margin-bottom: 15px;
+    }
+    .titleFont_content{
+      font-size: 15px;
+      color: #555555;
+      font-weight: bold;
+      margin-left: 52px;
+      margin-bottom: 20px;
+    }
+    .p_btnOne{
+      margin-left: 52px;
+    }
+    .P_btntwo{
+      margin-bottom: 40px;
+      margin-left: 15px;
+    }
+  }
+}

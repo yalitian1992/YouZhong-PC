@@ -1,0 +1,133 @@
+{
+	"status": 200,
+	"msg": "成功",
+	"data": [
+		{
+			"product_id": 1,
+			"price": 1000,
+			"discount": 1000,
+			"product_name": "土豪版上衣",
+			"product_color": "黑色",
+			"product_pic": "http://i3.ihaveu.net/image/auction/product/000/120/963/major_pic/c6e77be8.jpg.m78.jpg",
+			"sku": {
+				"id": 1,
+				"name": "XL"
+			},
+			"voucher": [
+				{
+					"id": 1,
+					"event_id": 1,
+					"name": "优惠券名称1",
+					"amount": 10,
+					"limitation": 500,
+					"description": "描述"
+				}, {
+					"id": 2,
+					"event_id": 2,
+					"name": "优惠券名称2",
+					"amount": 30,
+					"limitation": 1000,
+					"description": "描述"
+				}
+			],
+			"level": {
+				"id": 2,
+				"name": "白金",
+				"icon": "http://i3.ihaveu.net/image/auction/level/000/000/002/icon/a2ca5877.png",
+				"limitation": 500,
+				"percent": 40
+			}
+		}, {
+			"product_id": 2,
+			"price": 440,
+			"discount": 440,
+			"product_name": "土豪版裤子",
+			"product_color": "黑色",
+			"product_pic": "http://i3.ihaveu.net/image/auction/product/000/120/963/major_pic/c6e77be8.jpg.m78.jpg",
+			"sku": {
+				"id": 1,
+				"name": "XL"
+			},
+			"voucher": [
+				{
+					"id": 5,
+					"event_id": 3,
+					"name": "优惠券名称3",
+					"amount": 10,
+					"limitation": 100,
+					"description": "描述"
+				}
+			],
+			"level": {
+				"id": 2,
+				"name": "白金",
+				"icon": "http://i3.ihaveu.net/image/auction/level/000/000/002/icon/a2ca5877.png",
+				"limitation": 500,
+				"percent": 40
+			}
+		}, {
+			"product_id": 3,
+			"price": 1000,
+			"discount": 1000,
+			"product_name": "土豪版上衣2",
+			"product_color": "黑色",
+			"product_pic": "http://i3.ihaveu.net/image/auction/product/000/120/963/major_pic/c6e77be8.jpg.m78.jpg",
+			"sku": {
+				"id": 1,
+				"name": "XL"
+			},
+			"voucher": [
+				{
+					"id": 1,
+					"event_id": 1,
+					"name": "优惠券名称1",
+					"amount": 10,
+					"limitation": 500,
+					"description": "描述"
+				}, {
+					"id": 2,
+					"event_id": 2,
+					"name": "优惠券名称2",
+					"amount": 30,
+					"limitation": 1000,
+					"description": "描述"
+				}
+			],
+			"level": {
+				"id": 2,
+				"name": "白金",
+				"icon": "http://i3.ihaveu.net/image/auction/level/000/000/002/icon/a2ca5877.png",
+				"limitation": 500,
+				"percent": 40
+			}
+		}, {
+			"product_id": 4,
+			"price": 300,
+			"discount": 300,
+			"product_name": "土豪版上衣4",
+			"product_color": "黑色",
+			"product_pic": "http://i3.ihaveu.net/image/auction/product/000/120/963/major_pic/c6e77be8.jpg.m78.jpg",
+			"sku": {
+				"id": 1,
+				"name": "XL"
+			},
+			"voucher": [
+				{
+					"id": 1,
+					"event_id": 1,
+					"name": "优惠券名称1",
+					"amount": 10,
+					"limitation": 100,
+					"description": "描述"
+				}
+			],
+			"level": {
+				"id": 2,
+				"name": "白金",
+				"icon": "http://i3.ihaveu.net/image/auction/level/000/000/002/icon/a2ca5877.png",
+				"limitation": 500,
+				"percent": 40
+			}
+		}
+	]
+}

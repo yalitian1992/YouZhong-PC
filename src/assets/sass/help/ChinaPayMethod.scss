@@ -1,0 +1,41 @@
+@import "Custom";
+
+body {
+  #ClassContent {
+    .Content_btn{
+      margin-left: 15px;
+    }
+    .img_Content {
+      height: 40px;
+      padding-top: 10px;
+      margin-bottom: 30px;
+      img {
+        display: block;
+        float: left;
+        margin-right: 60px;
+      }
+      .imgFirst{
+        margin-left: 15px;
+      }
+      .imgLast{
+        margin-right: 0px;
+      }
+    }
+    .img_Content_ {
+      height: 40px;
+      padding-top: 10px;
+      margin-bottom: 50px;
+      img {
+        display: block;
+        float: left;
+        margin-right: 60px;
+      }
+      .imgFirst{
+        margin-left: 15px;
+      }
+      .imgLast{
+        margin-right: 0px;
+      }
+    }
+  }
+}

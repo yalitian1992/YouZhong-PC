@@ -1,0 +1,89 @@
+@import '../sass-statement';
+
+.user_mode{
+  width: 190px;
+  float: left;
+  margin-right: 40px;
+  padding: 30px 0 53px 0;
+  background:#fff;
+  .title{
+    font-size: 20px;
+    line-height: 1;
+    color: #111;
+    margin: 0 30px;
+    padding-bottom: 20px;
+    margin-bottom: 19px;
+    border-bottom: 1px dotted #999;
+  }
+  a{
+    display: block;
+    font-size: 13px;
+    padding: 12px 30px;
+    line-height: 20px;
+    margin-bottom: 4px;
+    color: #111;
+    cursor: pointer;
+    span{
+      position: relative;
+      top: -1px;
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: middle;
+      background-position: center center;
+    }
+     .user_ico{
+        @include u_img(16,16,-598,-13);
+      }
+      .order_ico{
+        @include u_img(14,16,-679,-13);
+      }
+      .chit_ico{
+        @include u_img(16,16,-651,-13);
+      }
+      .gift_ico{
+        @include u_img(16,14,-52,-19);
+      }
+      .addr_ico{
+        @include u_img(14,18,-706,-12);
+      }
+      .mear_ico{
+        @include u_img(16,16,-86,-19);
+      }
+      .psw_ico{
+        @include u_img(16,17,-625,-12);
+      }
+    &:hover{
+      color: #BB1E7B;
+
+    }
+    &.active{
+      background: #BB1E7B;
+      color: #fff;
+      .user_ico{
+        @include u_img(16,16,-598,-37);
+      }
+      .order_ico{
+        @include u_img(14,16,-680,-37);
+      }
+      .chit_ico{
+        @include u_img(16,16,-651,-37);
+      }
+      .gift_ico{
+        @include u_img(16,14,-52,-37);
+      }
+      .addr_ico{
+        @include u_img(14,18,-706,-37);
+      }
+      .mear_ico{
+        @include u_img(16,16,-86,-37);
+      }
+      .psw_ico{
+        @include u_img(16,17,-626,-36);
+      }
+    }
+  }
+}
+.w970{
+  width: 1200px;
+  @extend .clearfix;
+}

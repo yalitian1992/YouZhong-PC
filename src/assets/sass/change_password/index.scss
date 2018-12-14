@@ -1,0 +1,87 @@
+@import '../user_center/user_partial.scss';
+
+.right_content{
+  width: 970px;
+  height: 484px;
+  float: left;
+  background-color: #ffffff;
+  background-color: #e5e5e5;
+  font-family: 'MicrosoftYaHei',微软雅黑;
+
+  .change_password_title {
+    background-color: #f7f6f6;
+    width: 950px;
+    height: 40px;
+    border-bottom: 1px solid #dddddd;
+
+    font-size: 13px;
+    line-height: 40px;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .change_password_content{
+    width: 679px;
+    height: 326px;
+    text-align: left;
+    background-color: #ffffff;
+    border-top: 1px #dddddd;
+    padding-top: 118px;
+    padding-left: 291px;
+
+    ul li{
+      margin: 0px;
+      padding: 0px;
+    }
+
+    div{
+      text-align: left;
+      font-size: 13px;
+    }
+
+    .text_name_area{
+      float: left;
+      width:66px;
+      height: 130px;
+
+      ul li{
+        margin-bottom: 39px;
+        margin-top: 6px;
+      }
+    }
+
+    .text_field_area{
+      float: left;
+      width: 249px;
+      height: 213px;
+      margin-left: 15px;
+      .input_wrap{
+        width: 600px;
+        height: 30px;
+        margin-bottom: 20px;
+        #current_password ,#password ,#confirm_new_password{
+          width: 249px;
+          height: 30px;
+          border: 1px solid #cccccc;
+          padding-left: 10px;
+          margin-right: 10px;
+        }
+      }
+
+      .change_password_confirm_button{
+        cursor: pointer;
+        width: 138px;
+        height: 38px;
+        color: white;
+        background-color:#BB1E7B ;
+        margin-top: 20px;
+        font-size: 15px;
+        border: 0px;
+        &:hover{
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+

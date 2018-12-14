@@ -1,0 +1,37 @@
+@import "Custom";
+#RrightContent {
+  #ClassContent {
+    .title_top {
+      margin-bottom: 15px;
+    }
+    .title_btn{
+      margin-bottom: 30px;
+    }
+    .titleFont{
+      margin-bottom: 40px;
+    }
+    .imgtop{
+      margin-bottom: 50px;
+      img{
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    .imgbtn{
+      margin-bottom: 50px;
+      img{
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    .PageBtn{
+      margin-left: 20px;
+      margin-bottom: 50px;
+    }
+    .titleFont_page {
+      font-size: 15px;
+      color: #555555;
+      font-weight: bold;
+    }
+  }
+}

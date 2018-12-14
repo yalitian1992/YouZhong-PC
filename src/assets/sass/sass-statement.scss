@@ -1,0 +1,116 @@
+$content_width: 1200px; //主体内容宽度
+$content_width_1: 971px; //部分页面宽度
+$font_theme_color: #36b9d5;
+$font_color_1: #777; //字体颜色-灰色
+$font_color_2: #000; //字体颜色
+$font_color_3: #aaa;
+$font_color_4: #0fb0aa;
+$font_color_5: #eaddce;
+$font_color_6: #c1c1c1;
+$main_color: #f9423a;; //主体颜色
+$main_color_hover: #57c8c4;
+$color_1: #acb0b1;//土黄色
+$color_1_hover: #a29891;//土黄色
+$color_2: #fff;
+$color_3: #887464;
+$color_4: #b3a394;
+$color_5: #fafafa;//订单详情title背景
+$color_6: #f9793a;//内地
+$color_7: #6c8dde;//海外
+$color_8: #c2c2c2;
+$color_9: #333333;
+$body_c: #fff;//body background color
+$index_body_c: #f5f4f4;//首页body background color
+$border_c: #ccc;//border color
+$border_e: #e5e5e5;
+$border_d: #ddd;
+$border_d_hover: #a6dce8;
+$border_d9: #d9d9d9;
+$border_d3: #d3dee7;
+$error_color_a: #36b9d5;
+@mixin u_img($w:0, $h:0, $x:0, $y:0) {
+  width: #{$w}px;
+  height: #{$h}px;
+  background-position: #{$x}px #{$y}px;
+}
+@mixin u_image($url: '', $w:0, $h:0) {
+  background-image: url(#{$url});
+  width: #{$w}px;
+  height: #{$h}px;
+  background-size: #{$w}px #{$h}px;
+}
+@mixin float-left {
+  float:left;
+}
+@mixin float-right {
+  float: right;
+}
+//圆形
+@mixin round($ra:0) {
+  width: #{$ra};
+  height: #{$ra};
+  @include border-radius(#{$ra});
+}
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+@mixin animate($name, $duration, $iteration, $mode) {
+  -webkit-animation-name: $name;
+  -moz-animation-name: $name;
+  -o-animation-name: $name;
+  animation-name: $name;
+  -webkit-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  -o-animation-duration: $duration;
+  animation-duration: $duration;
+  -webkit-animation-iteration-count: $iteration;
+  -moz-animation-iteration-count: $iteration;
+  -o-animation-iteration-count: $iteration;
+  animation-iteration-count: $iteration;
+  -webkit-animation-fill-mode: $mode;
+  -moz-animation-fill-mode: $mode;
+  -o-animation-fill-mode: $mode;
+  animation-fill-mode: $mode;
+}
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+.clearfix{
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

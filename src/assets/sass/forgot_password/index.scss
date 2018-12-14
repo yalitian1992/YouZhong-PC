@@ -1,0 +1,86 @@
+@import "../sass-statement";
+
+.middle_wrap {
+  position: relative;
+  width: 100%;
+  padding-top:83px;
+  padding-bottom:30px;
+  //background: #eeeeee;
+  //background-image: url('@@_rel_start/images/loginregister/bg.png?20151229154423');
+  background-repeat: repeat;
+  border-top: 1px solid #dddddd;
+  .bottom_bg{
+    position: relative;
+    bottom:-30px;
+    width: 100%;
+    height:56px;
+    //background-image: url('@@_rel_start/images/loginregister/bottom_bg.png?20151229154423');
+    background-repeat: repeat;
+  }
+}
+
+.find_password_content {
+  width: 880px;
+  height: 480px;
+  margin: 0 auto;
+  padding: 50px 0;
+  background-color: #ffffff;
+  .fonts_passwords {
+    font-size: 20px;
+    color: #111111;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+}
+
+.login_foot {
+  height: 210px;
+  background: #ffffff;
+  overflow: hidden;
+  //margin-top: 83px;
+  .copyright {
+    margin: 0 auto;
+    width: 458px;
+    background: #ffffff;
+    left: 300px;
+    padding: 27px 27px 0 27px;
+    color: #aaaaaa;
+    .hot_line {
+      text-align: center;
+      font-size: 14px;
+    }
+    .title {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 19px;
+      .copy_right_icon {
+        font-size: 10px;
+      }
+    }
+    .ihaveu_logo {
+      display: inline-block;
+      margin-top: 19px;
+      margin-left: 180px;
+      text-align: center;
+      @include u_img(94, 31, -238, -73);
+    }
+  }
+}
+.register_button {
+  cursor: pointer;
+  position: relative;
+  margin-top: 25px;
+  width: 315px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  background: #BB1E7B;
+  &:hover {
+    opacity:0.8;
+  }
+  &.unable {
+    background-color: #ccc !important;
+  }
+}

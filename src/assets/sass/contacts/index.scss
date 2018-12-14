@@ -1,0 +1,149 @@
+.mains{
+
+		width: 1200px;
+		height: 800px;
+		margin: 0 auto;
+		margin-top: 40px;
+		padding-bottom: 40px;
+	}
+	.mains_right{
+		width: 970px;
+		float: left;
+	}
+	.mains_right h2{
+		width: 100%;
+		background: #ACB0B1;
+		line-height: 40px;
+    font-weight: 400;
+	}
+	.mains_right h2 span{
+		color: #FFF;
+		font-size: 12px;
+		display: inline-block;
+		text-align: center;
+	}
+	.mains_right h2 span:nth-child(1){
+		width: 160px;
+
+	}
+	.mains_right h2 span:nth-child(2){
+		width: 342px;
+
+	}
+	.mains_right h2 span:nth-child(3){
+		width: 85px;
+		margin-left: 85px;
+
+	}
+	.mains_right h2 span:nth-child(4){
+		width: 75px;
+
+		margin-left: 90px;
+	}
+	.mains_right h2 span:nth-child(5){
+		width: 133px;
+
+
+	}
+	.mains_right ul{
+		background: #fff;
+		width: 970px;
+		display: block;
+		margin-bottom: 30px;
+	}
+	.mains_right ul li{
+		line-height: 52px;
+		width: 100%;
+		height: 52px;
+		border-bottom: solid 1px #ccc;
+		background: #fff;
+		clear: both;
+	}
+	.mains_right ul li:hover{
+		background: #F7F8F9;
+	}
+	.mains_right ul li span{
+		height: 52px;
+    line-height: 52px;
+		float: left;
+		text-align: center;
+		color: #555555;
+		font-size: 14px;
+	}
+	.mains_right ul li span a{
+		color: #67A5E5;
+		margin-left: 10px;
+		font-size: 13px;
+		cursor: pointer;
+		float: left;
+    line-height: 52px;
+	}
+	.mains_right ul li span:nth-child(1){
+		width: 160px;
+		max-width: 160px;
+		white-space:nowrap;
+		overflow:hidden;
+		text-overflow:ellipsis;
+
+	}
+	.mains_right ul li span:nth-child(2){
+		width: 342px;
+		max-width: 342px;
+		white-space:nowrap;
+		overflow:hidden;
+		text-overflow:ellipsis;
+
+	}
+	.mains_right ul li span:nth-child(3){
+		width: 85px;
+		margin-left: 85px;
+
+	}
+	.mains_right ul li span:nth-child(4){
+		width: 75px;
+
+		margin-left: 90px;
+	}
+	.mains_right ul li span:nth-child(5){
+		width: 133px;
+
+		cursor: pointer;
+	}
+	.moren{
+		display: none;
+	}
+	ul li .active{
+		display: block;
+	}
+	.mains_right .active .moren{
+		display: block !important;
+	}
+	.mains_right ul li .noactive{
+		display: block;
+	}
+	.mains_right ul li .noactive{
+		display: block;
+	}
+	.mains_right ul li span:nth-child(5) i{
+		font-size: 13px;
+		padding: 2px 2px;
+		color: #67A5E5;
+
+	}
+	.add_shou{
+		font-size: 14px;
+		color: #67A5E5;
+		width: 926px;
+		cursor: pointer;
+	}
+	.add_shou i{
+		margin-left: 44px;
+	}
+	.add_shou .icos{
+		width: 10px;
+		height: 10px;
+		display: inline-block;
+		background-image: url('~@/assets/images/new-img/new.png');
+    	background-size: 800px 353px;
+    	background-position:-497px -93px;
+	}

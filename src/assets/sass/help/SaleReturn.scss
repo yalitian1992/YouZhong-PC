@@ -1,0 +1,121 @@
+@import "../sass-statement.scss";
+
+#RrightContent{
+  width: $content_width_1;
+  #headerTop{
+    font-family: 'MicrosoftYaHei',微软雅黑;
+    font-size: 13px;
+    padding: 10px 20px;
+    width: 931px;
+    height:39px;
+    line-height:39px;
+    background-color: #f7f6f6;
+    border-bottom: 1px solid #dddddd;
+    color: #111111;
+  }
+  #ClassContent{
+    padding: 30px 30px;
+    font-size: 13px;
+    color: #555555;
+    background-color: #ffffff;
+    .titleFont {
+      font-size: 15px;
+      color: #555555;
+      font-weight: bold;
+    }
+    .P_top{
+      margin-left: 22px;
+      margin-top: 20px;
+    }
+    .P_Content{
+      padding-left: 52px;
+      margin-top: 15px;
+    }
+
+    .P_btnOne{
+      margin-bottom: 20px;
+      padding-left: 52px;
+      margin-top: 15px;
+    }
+    .p_btnTwo{
+      margin-bottom: 40px;
+      padding-left: 52px;
+      margin-top: 15px;
+    }
+    .P_btnThree{
+      padding-left: 22px;
+      margin-top: 15px;
+    }
+  }
+  .imgCalss{
+    position: relative;
+    left: 60px;
+    padding:50px 0px 155px 0px;
+    .last_Con{
+      position: relative;
+      float: left;
+      margin-right: 0px;
+      .arrow{
+        display: none;
+      }
+      .btnCon{
+        position: relative;
+        margin-top: 15px;
+        text-align: center;
+        margin-left:0px;
+      }
+      img{
+        display: block;
+      }
+      .tuikuan{
+        display: inline-block;
+        @include u_img(70,70,-90,-12);
+      }
+    }
+    .floatCon{
+      position: relative;
+      margin-right: 10px;
+      float: left;
+      .btnCon{
+        position: relative;
+        margin-top: 15px;
+        margin-left:-95px;
+        text-align: center;
+      }
+      .shenqing{
+        display: inline-block;
+        @include u_img(70,70,-12,-10);
+      }
+      .tianxie{
+        display: inline-block;
+        @include u_img(70,70,-90,-92);
+      }
+      .kefu{
+        display: inline-block;
+        @include u_img(70,70,-12,-88);
+      }
+      .kuaidi{
+        display: inline-block;
+        @include u_img(70,70,-166,-13);
+      }
+
+      .arrow{
+        position: relative;
+        margin-left: 80px;
+        top: -70px;
+        display: inline-block;
+        @include u_img(90,9,-146,-87);
+      }
+      img{
+        display: block;
+        border: none;
+      }
+      #picLeft_one{
+        margin-left: -3px;
+      }
+      #picLeft_two{
+        margin-left: -9px;
+      }
+    }
+  }
+}

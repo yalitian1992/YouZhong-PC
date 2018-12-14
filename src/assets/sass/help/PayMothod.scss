@@ -1,0 +1,23 @@
+@import "Custom";
+p{
+  color: $font_color_1;
+}
+#ClassContent {
+  p{
+    margin-bottom: 30px;
+  }
+  img {
+    padding-left: 15px;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  nobr {
+    color: $font_color_3;
+    font-family: 'MicrosoftYaHei', 微软雅黑;
+    font-weight: normal;
+  }
+  .titleFont{
+    margin-top: 30px;
+  }
+}

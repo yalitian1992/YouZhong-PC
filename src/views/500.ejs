@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Not Found</title>
+  <link rel="stylesheet" href="<%= sails.config.cdn_host %>/styles/base.css?20151229154423">
+  <link href='<%= sails.config.cdn_host %>/styles/error/error.css?20151229154423' rel='stylesheet'/>
+</head>
+<body>
+<div id="topnav">
+  <div class="content">
+    <a href="http://uxuan.ihaveu.com/" target="_blank" class="left"><!-- <span class="ico header_ico"></span> -->欢迎来到优众网!</a>
+    <ul class="right">
+      <li class="bdn"><a href="/login"><span>请登录</span></a></li>
+      <li><a href="/register"><span>免费注册</span></a></li>
+      <li><a href="/trades"><span>我的订单</span></a></li>
+      <li><a href="/user_center"><span>个人中心<em class="ico down_ico hide"></em></span></a></li>
+
+      <li><a href="/helps/xinshoushuoming"><span>购物须知</span></a></li>
+      <!-- <li class="bdn code">
+        <img data-src="<%= sails.config.cdn_host %>/images/footer/touch_code.jpg?20151229154423" src="/images/footer/touch_code.jpg" alt=""/>
+        <a href="http://tuxuan.ihaveu.com/" target="_blank"><span><em class="ico phone_ico"></em>移动</span></a>
+      </li>
+      <li class="bdn code">
+        <img data-src="<%= sails.config.cdn_host %>/images/footer/weichat_code.jpg?20151229154423"  src="/images/footer/weichat_code.jpg" alt=""/>
+        <a href="javascript:void(0)"><span><em class="ico wechat_ico"></em>微信</span></a>
+      </li> -->
+      <li class="bdn last">
+        
+              <a style="cursor: default;"><span><em class="ico ntalker_ico"></em>010-84855232</span></a>
+    
+      </li>
+    </ul>
+  </div>
+</div>
+<div id="mainhead">
+  <div class="content">
+    <a class="ico logo" href="/index"></a>
+    <!--<a href="/mails/2747" class="ad_img loaded">-->
+      <!--<img src="<%= sails.config.cdn_host %>/images/base/u_pic.jpg?20151229154423">-->
+    <!--</a>-->
+
+    <div class="right">
+      <form class="search" action="/products" method="get">
+        <span class="ico"></span>
+        <input type="text" placeholder="请输入内容" name='keyword'>
+        <input type="submit" class="go_search" value="搜索"/>
+      </form>
+      <div class="cart_area">
+      <a href="/carts" class="go_cart"><span class="cartico ico"></span><span>我的购物车</span><span
+          class="numbs"></span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- partial('partials/error.ejs') %>
+
+<%- partial('partials/footer.ejs') %>
+</body>
+</html>

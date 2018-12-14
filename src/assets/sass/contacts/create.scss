@@ -1,0 +1,119 @@
+@import "../sass-statement";
+body{
+  background-color: $border_e;
+  #topnav{
+    background-color: $body_c;
+    border-bottom: 1px solid $border_d;
+  }
+  #mainhead{
+    background-color: $color_2;
+    .content{
+      background: $color_2;
+    }
+  }
+}
+.main{
+  background-color: #fff;
+  .content{
+     font-size:12px;
+    .border_input{
+      width:180px;
+      border:1px solid;
+      border-color: #CCC;
+      height:27px;
+      padding: 0 5px;
+    }
+    .pre_title{
+      position:relative;
+      top:2px;
+      height:5px;
+      line-height:5px;
+      color:red;
+      vertical-align:middle;
+    }
+    .alert{
+      position:relative;
+      top:-1px;
+      @include u_img(15,16,-44,-70);
+      display:inline-block;
+      vertical-align:middle;
+    }
+    .form_header{
+      background:#f7f6f6;
+      line-height:40px;
+      padding-left:20px;
+      color:#979797;
+    }
+    .form{
+      position:relative;
+      background:#ffffff;
+      height:370px;
+      .receiver_name{
+        position:relative;
+        padding-top:30px;
+        padding-left:30px;
+        .name_alert{
+          position:relative;
+          padding-top:-6px;
+        }
+      }
+      .address{
+        position:relative;
+        padding-top:20px;
+        padding-left:30px;
+        .state_label{
+          position:relative;
+          width:180px;
+          margin-right:10px;
+          display:inline-block;
+          .select_box{
+            width:180px;
+          }
+        }
+      }
+      .detail_address{
+        position:relative;
+        padding-top:20px;
+        padding-left:30px;
+        .detail_address_input{
+          width:438px;
+        }
+      }
+      .postcode{
+        position:relative;
+        padding-top:20px;
+        padding-left:30px;
+      }
+      .telephone{
+        position:relative;
+        padding-top:20px;
+        padding-left:30px;
+      }
+      .select_address{
+        position:relative;
+        .setBtn{
+          position:relative;
+          margin-left:100px;
+          margin-top:20px;
+        }
+      }
+      .button_area{
+        position:relative;
+        margin-top:30px;
+        .save_btn{
+          background:#BB1E7B;
+          width: 100px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          color: white;
+          margin-left:30px;
+          &:hover{
+            opacity: 0.8;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

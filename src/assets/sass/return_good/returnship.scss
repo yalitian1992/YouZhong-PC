@@ -1,0 +1,223 @@
+
+@import '../sass-statement';
+
+body {
+  background-color: $border_e;
+  #topnav {
+    background-color: $body_c;
+    border-bottom: 1px solid $border_d;
+  }
+}
+
+body label.error::after {
+
+}
+label.error.express::after{
+  display: none;
+}
+
+.main {
+  background-color: $border_e;
+  .content {
+    width: 1200px;
+    background-color: #ffffff;
+    font-size: 12px;
+    .error_info {
+      padding-left: 30px;
+    }
+    .title_first {
+      background: url("~@/assets/images/return_good/right.png") no-repeat;
+      height: 24px;
+      width: 24px;
+    }
+    .arrival_info {
+      height: 370px;
+    }
+    .border_input {
+      width: 160px;
+      border: 1px solid;
+      border-color: #CCC;
+      height: 27px;
+      padding: 0 5px;
+    }
+    .label_background {
+      position: relative;
+      padding-top: 30px;
+      background: #ffffff;
+      .error {
+        margin-left: 30px;
+        font-size: 13px;
+        color: #BB1E7B;
+      }
+      .first {
+        margin-bottom: 13px;
+      }
+    }
+    .border_btm_input {
+      width: 340px;
+      border: 1px solid #CCC;
+      height: 27px;
+      padding: 0 5px;
+    }
+    select {
+      width: 160px;
+    }
+    .pre_title {
+      height: 5px;
+      line-height: 5px;
+      color: #BB1E7B;
+      vertical-align: middle;
+    }
+    label.alert_title {
+      color: red;
+    }
+    .alert {
+      @include u_img(15, 16, -44, -70);
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .form_header {
+      background: #f7f6f6;
+      line-height: 40px;
+      padding-left: 20px;
+      color: #111111;
+      font-size: 13px;
+    }
+    .form {
+      background: #ffffff;
+      .receiver_name {
+        padding-top: 30px;
+        padding-left: 30px;
+        .name_alert {
+          padding-top: -6px;
+        }
+      }
+      ul {
+        li {
+
+          input {
+            margin-right: 10px;
+          }
+        }
+        .infomation {
+          color: #777777;
+        }
+      }
+      .submit:hover {
+        cursor: pointer;
+      }
+      .phone {
+        padding-top: 20px;
+        padding-left: 30px;
+        .state_label {
+          width: 180px;
+          margin-right: 10px;
+          display: inline-block;
+          .select_box {
+            width: 180px;
+          }
+        }
+      }
+      .state_label {
+        margin-right: 15px;
+      }
+      .detail_address {
+        padding-top: 20px;
+        padding-left: 30px;
+        .detail_address_input {
+          width: 438px;
+        }
+      }
+      .postcode {
+        padding-top: 20px;
+        padding-left: 30px;
+      }
+      .bank_card {
+        padding-top: 20px;
+        padding-left: 30px;
+      }
+      .select_address {
+        .setBtn {
+          margin-left: 100px;
+          margin-top: 20px;
+        }
+      }
+      .button_area {
+        margin-top: 30px;
+        .save_btn {
+          background: #BB1E7B;
+          width: 73px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          color: white;
+          margin-left: 112px;
+        }
+      }
+    }
+  }
+
+  .content_online {
+    .label_background {
+      margin-bottom: 20px;
+    }
+    .onlone_info {
+      height: 300px;
+    }
+  }
+
+  .content_success {
+    .form_online_success {
+      padding-top: 10px;
+      height: 300px;
+    }
+    ul {
+      padding-left: 40px;
+    }
+    .content_underline {
+      background-color: #ffffff;
+      margin: 40px 0 10px 0;
+      padding: 0 auto;
+      hr {
+        border: 1px solid #eeeeee;
+        margin: 0 70px 0 70px;
+      }
+    }
+    .label_background {
+      padding-left: 40px;
+      .title_first {
+        font-size: 18px;
+        color: #111111;
+      }
+      .title_btn {
+        font-size: 13px;
+        color: #777777;
+      }
+    }
+    .form_success {
+      height: 300px;
+      .pre_title {
+        color: #777777;
+      }
+    }
+  }
+
+  .know_info {
+    margin-top: 20px;
+    .know_fonts {
+      line-height: 27px;
+      font-size: 13px;
+      color: #555555;
+      margin: 26px 30px 0 30px;
+    }
+    .know_title {
+      font-size: 13px;
+      color: #333333;
+      margin: 25px 30px 0 30px;
+      font-weight: bold;
+    }
+    .know_last_fonts {
+      margin-bottom: 30px;
+    }
+  }
+}

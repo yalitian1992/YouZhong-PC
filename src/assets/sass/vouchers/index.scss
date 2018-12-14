@@ -1,0 +1,234 @@
+@import '../user_center/user_partial.scss';
+
+.voucherList {
+  overflow: hidden;
+  width: 970px;
+  float: left;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  .aside{
+    th{
+      font-weight: 400;
+      vertical-align: middle;
+    }
+  }
+  .voucher_title {
+    position: relative;
+    width: 970px;
+    height: 152px;
+    background-color: #ffffff;
+    .add_info {
+      overflow: hidden;
+      .add_size {
+        float: left;
+        font-size: 15px;
+        color: #555555;
+        margin: 70px 20px 0 40px;
+      }
+      .input_number {
+        float: left;
+        width: 305px;
+        height: 38px;
+        border: 1px solid #cccccc;
+        margin: 58px 20px 10px 0;
+        input {
+          width: 290px;
+          height: 20px;
+          margin-left: 10px;
+          margin-top: 9px;
+          font-size: 15px;
+          color: #555555;
+          border: 0px;
+          font-size: 17px;
+        }
+      }
+      .add_button {
+        float: left;
+        width: 115px;
+        height: 40px;
+        background-color: #0fb0aa;
+        line-height: 40px;
+        text-align: center;
+        font-size: 15px;
+        color: #ffffff;
+        margin-top: 58px;
+      }
+    }
+    .voucher_error_size {
+      font-size: 13px;
+      color: #e74b5a;
+      margin-left: 137px;
+      background: url("~@/assets/images/vouchers/warning.png") no-repeat;
+      background-position: 0% 50%;
+      padding-left: 20px;
+      height: 15px;
+    }
+  }
+
+  @mixin table_displaystyle {
+    background-color: #ffffff;
+    margin-bottom: 94px;
+    th {
+      font-size: 13px;
+      color: #ffffff;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      background-color: #acb0b1;
+    }
+    .noshow {
+      .error_show {
+        width: 970px;
+        height: 295px;
+        background-color: #ffffff;
+        position: relative;
+        .error_img {
+          position: absolute;
+          left: 426px;
+          top: 75px;
+          img {
+            display: block;
+          }
+        }
+        .title {
+          height: 20px;
+          width: 190px;
+          font-size: 15px;
+          color: #777777;
+          position: absolute;
+          left: 395px;
+          bottom: 95px;
+        }
+      }
+    }
+    .show {
+      td {
+        height: 54px;
+        line-height: 54px;
+        text-align: center;
+        border: 1px solid #eeeeee;
+        font-size: 13px;
+        color: #555555;
+        word-break: keep-all; /* 不换行 */
+        white-space: nowrap; /* 不换行 */
+        overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
+        text-overflow: ellipsis;
+        padding: 0 10px;
+        max-width: 100px;
+      }
+    }
+    .is_using{
+      background-color: #f7f7f7;
+      td {
+        height: 54px;
+        line-height: 54px;
+        text-align: center;
+        border: 1px solid #eeeeee;
+        font-size: 13px;
+        color: #bbbbbb;
+        word-break: keep-all; /* 不换行 */
+        white-space: nowrap; /* 不换行 */
+        overflow: hidden; /* 内容超出宽度时隐藏超出部分的内容 */
+        text-overflow: ellipsis;
+        padding: 0 10px;
+        max-width: 100px;
+      }
+    }
+  }
+  //table使用这个class显示代金券列表
+  .show_voucherList {
+    @include table_displaystyle;
+    .noshow {
+      display: none;
+    }
+  }
+  //table使用这个class显示错误图片
+  .aside {
+    @include table_displaystyle;
+    .show {
+      //display: none;
+    }
+  }
+}
+
+nav{
+  overflow: hidden;
+}
+.pagination{
+  margin-top: 30px !important;
+  margin-bottom: 100px;
+  font-size: 0;
+  text-align: right;
+  float: right;
+  .right_ico{
+    margin-right: 0;
+    margin-left: 15px;
+  }
+  .left_ico{
+    margin-right: 24px;
+  }
+  .noclick{
+    width: 26px;
+    height: 24px;
+    display: inline-block;
+    border: 1px solid #ddd ;
+    vertical-align: middle;
+    background:#eee;
+    text-align: center;
+    .ico{
+      margin-top: 7px;
+      display: inline-block;
+    }
+    &.left_ico{
+      .ico{
+        @include u_img(6,11,-644,-127);
+      }
+    }
+    &.right_ico{
+      .ico{
+        @include u_img(6,11,-660,-127);
+      }
+    }
+  }
+  .noborder{
+    color: #555;
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: middle;
+    margin-right: 9px;
+  }
+  a{
+    display: inline-block;
+    padding: 0 8px;
+    height: 26px;
+    margin-right: 4px;
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    font-size: 16px;
+    line-height: 24px;
+    //@include link-colors(#555, #555, #555, #555, #555);
+    &.active{
+      border-color: #BB1E7B;
+      background:#BB1E7B;
+      span{
+        color: #fff;
+      }
+    }
+    .ico{
+      position: relative;
+      display: inline-block;
+      margin: 0 1px;
+    }
+    &.left_ico{
+      .ico{
+        @include u_img(6,11,-644,-127);
+      }
+    }
+    &.right_ico{
+      .ico{
+        @include u_img(6,11,-660,-127);
+      }
+    }
+  }
+}
+

@@ -1,0 +1,186 @@
+
+<link rel="stylesheet" href="<%= sails.config.cdn_host %>/styles/send_reset/index.css?20151229154423">
+
+<link rel="stylesheet" href="<%= sails.config.cdn_host %>/styles/forgot_password/index.css?20151229154423">
+<style type="text/css">
+.head_list ul {
+  padding-top: 10px;
+}
+.head_list ul li{
+  width: 140px;
+  height: 54px;
+  line-height: 54px;
+  float: right;
+  position: relative;
+  margin-left: 100px;
+}
+.head_list ul li span{
+  color: #333333;
+  font-size: 16px;
+}
+.head_list ul li b{
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  left: -60px;
+  background-image: url('/images/new-img/new.png?20151229154423');
+    background-size: 800px 353px;
+}
+.b_1{
+
+
+    background-position: -124px -222px;
+}
+.b_2{
+
+
+    background-position: -245px -222px;
+}
+.b_3{
+
+
+    background-position: -184px -222px;
+}
+</style>
+<div class="header">
+<div class="login_head">
+      <a href="/index">
+        <span class="ico platform_logo" style="background-image: none;">
+          <img src="/images/LOGO.png" alt="logo">
+        </span>
+      </a>
+      <div class="head_list">
+          <ul>
+            <li>
+              <b class="b_1"></b>
+              <span>100%全球正品保障</span>
+            </li>
+            <li >
+              <b class="b_2"></b>
+              <span>全场满200包邮</span>
+            </li>
+            <li >
+              <b class="b_3"></b>
+              <span>七天无条件退换</span>
+            </li>
+          </ul>
+      </div>
+    </div>
+
+</div>
+<div class="middle_content" style="background: none">
+<div class="find_password_content" style="height: 360px;">
+  <div class="title">尊敬的用户：</div>
+  <div class="content_email">密码重置码已经发送到手机：<a class="uesr"></a></div>
+  <div class="forms">
+    <form class="forms_a">
+    <div><input type="text" class="phone" placeholder="重置码"><span class="sends">重新发送验证码</span></div>
+    <div><input type="password" class="new_password" placeholder="新密码"></div>
+    <div> <input type="password" class="password_confirmation" placeholder="确认密码"></div>
+    <div class="buttons" style="color: #fff; font-size: 16px;text-align: center;margin-top: 15px;cursor: pointer;">确认并登陆</div>
+    <p class="url_id"></p>
+    </form>
+  </div>
+</div>
+  <div class="bottom_bg"></div>
+</div>
+<div class="login_foot">
+  <div class="copyright">
+    <p class="hot_line">客服热线：010-84855232</p>
+
+    <p class="title"><span class="copy_right_icon">©</span>&nbsp;&nbsp;2017 ihaveu.com 版权所有&nbsp;&nbsp;&nbsp;增值电信业务经营许可证&nbsp;&nbsp;&nbsp;津B2-20100085
+    </p>
+    <span class="foot_ico ihaveu_logo"></span>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(function(){
+    $(".content_email a").html(window.location.search.replace('?phone=', ''));
+})
+   function time (){
+    var num=60;
+    var times=setInterval(function(){
+      num--;
+      $(".sends").text(num+"秒后重新发送")
+    if(num<0){
+      clearInterval(times);
+      $(".sends").attr("disabled",false).css("background","#BB1E7B");
+      $(".sends").text("重新发送");
+      return false
+     }
+    },1000)
+ }
+  $(".buttons").on("click",function(){
+      var  account = {};
+          account.login=$('.uesr').text();
+          account.reset_code=$('.phone').val();
+          account.password=$('.new_password').val();
+      var params = {
+        _method: "put",
+        account:account
+      };
+      var url_id= 0;
+    app.gengxin(params,url_id,function(response){
+          if(response.error){
+            alert("验证码错误")
+          }else{
+            window.location.href = "/login";
+          }
+
+    })
+  })
+  $(".sends").on("click",function(){
+     time();
+    $(".sends").css("background","#ccc").attr("disabled",true)
+    var  account = {};
+          account.login=$('.uesr').text();
+
+      var params = {
+        account:account
+      };
+       app.sends_send(params,function(response){
+
+              })
+     })
+</script>
+
+<style type="text/css">
+  .forms{
+    width: 314px;
+    height: 160px;
+
+  }
+  .forms_a div{
+    height: 30px;
+    border: solid 1px #ccc;
+    line-height: 30px;
+    padding-left: 4px;
+    color: #777777;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .buttons{
+    border: none;
+    background: #BB1E7B;
+    margin:0 auto;
+    border-radius: 5px;
+
+  }
+  .sends{
+    cursor: pointer;
+    padding:0 4px;
+    font-size: 12px;
+    color: #FFF;
+    background: #bb1E7B;
+    border-radius: 5px;
+    float: right;
+    width: 87px;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 4px;
+    margin-right: 4px;
+    text-align: center;
+  }
+
+</style>

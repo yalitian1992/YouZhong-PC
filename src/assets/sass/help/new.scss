@@ -1,0 +1,32 @@
+@import "../sass-statement";
+#RrightContent{
+  width: $content_width_1;
+  #headerTop{
+    font-family: 'MicrosoftYaHei',微软雅黑;
+    font-size: 13px;
+    padding: 10px 20px;
+    width: 931px;
+    height:39px;
+    line-height:39px;
+    background-color: #f7f6f6;
+    border-bottom: 1px solid #dddddd;
+    color: #111111;
+  }
+  #ClassContent{
+    padding: 30px 30px;
+    font-size: 13px;
+    color: #555555;
+    background-color: #ffffff;
+    a{
+      color: #BB1E7B;
+      margin-bottom: 5px;
+      border-bottom: 1px solid #BB1E7B;
+    }
+    p{
+      margin-bottom: 22px;
+    }
+    .P_top{
+      margin-bottom: 15px;
+    }
+  }
+}

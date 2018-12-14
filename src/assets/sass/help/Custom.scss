@@ -1,0 +1,76 @@
+@import "../sass-statement";
+@import "new";
+
+#RrightContent {
+  #headerTop {
+    font-family: 'MicrosoftYaHei',微软雅黑;
+    font-size: 13px;
+    height:39px;
+    line-height:39px;
+    border-bottom: 1px solid #dddddd;
+    color: #111111;
+  }
+  #ClassContent {
+    font-family: 'MicrosoftYaHei', 微软雅黑;
+    color: $font_color_1;
+    font-weight: normal;
+    .titleFont {
+      font-size: 15px;
+      color: #555555;
+      font-weight: bold;
+    }
+    .ALL_btn {
+      margin-bottom: 60px;
+      margin-left: 15px;
+    }
+    .t_top{
+      margin:0 0 0 10px;
+      padding:0;
+    }
+    .t_bom{
+      margin:30px 0 0 10px;
+      padding:0;
+    }
+    .P_aboutuxuan{
+      font-size: 13px;
+      line-height: 23px;
+      margin: 15px 0 0 10px;
+    }
+    .P_top {
+      margin-left: 15px;
+    }
+    .P_Bom {
+      margin-bottom: 40px;
+      margin-left: 15px;
+    }
+    .tab_Bom {
+      margin-bottom: 30px;
+      margin-left: 15px;
+    }
+    .tab_Bon{
+      margin-bottom: 235px;
+      margin-left: 15px;
+    }
+    .w-table_para {
+      width: 875px;
+      margin: 0px auto 60px auto;
+      th {
+        background-color: #f5f4f4;
+        height: 40px;
+        border: 1px solid #e5e5e5;
+        color: #000000;
+        font-size: 14px;
+        text-align: center;
+        font-weight: normal;
+      }
+      td {
+        padding: 20px 20px;
+        border:1px solid #e5e5e5;
+        font-size: 13px;
+        color: #555555;
+        font-weight: lighter;
+        text-align: center;
+      }
+    }
+  }
+}

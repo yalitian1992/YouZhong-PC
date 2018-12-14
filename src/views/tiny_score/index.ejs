@@ -1,0 +1,237 @@
+<link rel="stylesheet" href="<%= sails.config.cdn_host %>/styles/vouchers/index.css?20151229154423">
+<%- partial('../partials/top') %>
+<%- partial('../partials/normal_header') %>
+<div class="content mt40">
+  <%- partial('../partials/user_center') %>
+     <div class="right_content">
+        <div class="tiny_top">
+        <p class="userName" style="display: none;"></p>
+            <div class="top_left">
+                <div class="user_head">
+                  <img src="<%= ImageHelper.add_suffix(pic[0].pic)%>">
+                </div>
+                <div class="User_information">
+                  <p><span>当前账号</span>
+                  <% if(account){ %>
+                      <% if(account.phone){ %>
+                      <span style="font-size: 18px;" class="user_id"><%= account.phone %> </span>
+                       <% }else{ %>
+                       <span style="font-size: 18px;" class="user_id"><%= account.email %> </span>
+                        <% } %>
+                  <% }else{ %>
+                    <span style="font-size: 18px;" class="user_id"> </span>
+                  <% } %>
+                  </p>
+                  <p class="balance"><span>账户余额</span><b style="font-size: 18px;" class="balances">0</b> <i class="ba_icon"></i></p>
+                </div>
+            </div>
+            <div class="top_right">
+                <p class="user_name"><span class="bound_icon"></span>重宝奇兵账号 <span class="Unbound">未绑定</span> </p>
+                <a href="/tiny_score/binding"><p class="btn">立即绑定</p></a>
+            </div>
+            <div class="top_right_Bound" style="display: none;">
+                <p><span></span>重宝奇兵账号 <span style="margin-left: 10px;" class="app_phone"></span> </p>
+                <a href="/tiny_score/binding"><p class="btn">更换账号</p></a>
+            </div>
+        </div>
+        <div class="tiny_main">
+          <p class="detailed">账户明细</p>
+
+          <ul class="tiny_list">
+            <li class="fist_list"><span class="time">时间</span> <span class="Coupon"></span> <span class="number">数量</span> <span class="channel">详情渠道</span></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+<%- partial('../partials/footer.ejs') %>
+<script src="<%= sails.config.cdn_host %>/js/dependencies/jquery-plugin/jquery.validate.min.js?20151229154423"></script>
+<script type="text/javascript">
+  (function(){
+     app.details({account:Number($(".user_id").text())},function(response){
+          var listHtml=""
+          for(i in response.execDatas){
+            if(response.execDatas[i].changeAmount>0){
+              response.execDatas[i].changeAmount="+"+response.execDatas[i].changeAmount;
+            }else{
+              response.execDatas[i].changeAmount="-"+response.execDatas[i].changeAmount;
+              $(".number").eq(i).css("color","#000")
+            }
+          listHtml+='<li><span  class="time">'+response.execDatas[i].createAt+'</span> <span class="Coupon">'+response.execDatas[i].attach+'</span><span class="number">'+response.execDatas[i].changeAmount+'</span><span class="channel">订单号：'+response.execDatas[i].tradeNo+'</span></li>';
+          }
+          $(".tiny_list").append(listHtml);
+
+         })
+    app.boundState({account:Number($(".user_id").text())},function(response){
+
+      if(response.execData.status == 1){
+        $(".balances").text(response.execData.accountBlance);
+        $(".top_right").css("display","none");
+        $(".top_right_Bound").css("display","block");
+        $(".app_phone").html(response.execData.mobile);
+      }else if(response.execData.status == 1){
+        $(".top_right").css("display","block");
+        $(".top_right_Bound").css("display","none");
+      }
+
+
+    })
+  })()
+</script>
+<style type="text/css">
+  body .mt40{
+    margin-bottom: 40px;
+
+  }
+  .right_content{
+    width: 970px;
+    float: left;
+    height: 100%;
+
+    -webkit-font-smoothing: antialiased;
+  }
+  .tiny_top{
+    width: 970px;
+    height: 166px;
+    line-height: 1;
+    background: #fff;
+    border-top: 5px solid #acb0b1;
+  }
+  .top_left{
+    width: 485px;
+    height: 166px;
+    border-right: solid 1px #EEEEEE;
+    float: left;
+  }
+  .top_right,.top_right_Bound{
+    float: left;
+  }
+  .top_right_Bound{
+    display: block;
+  }
+  .tiny_main{
+    background: #fff;
+    width: 970px;
+    margin-top: 20px;
+    overflow: h
+  }
+  .detailed{
+    height: 34px;
+    line-height: 34px;
+    font-size: 16px;
+    background: #acb0b1;
+    color: #EEEEEE;
+    padding-left: 30px;
+    font-weight: bold;
+  }
+  .tiny_list{
+    height: auto;
+    display：table;
+  }
+  .tiny_list li span{
+    width: 240px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    color: #111111;
+  }
+  .tiny_list li .number{
+    width: 220px;
+  }
+  .tiny_list li .channel{
+    width: 254px;
+
+  }
+  .tiny_list .fist_list{
+    height: 46px;
+    line-height: 46px;
+    background: #F7F7F7;
+  }
+  .tiny_list li{
+    height: 80px;
+    line-height: 80px;
+    background: #fff;
+    border-bottom: solid 1px  #EEEEEE;
+  }
+   .tiny_list .number{
+    color: #BB1E7B;
+    font-size: 16px;
+  }
+  .tiny_list .fist_list .number{
+    color: #111111;
+    font-size: 14px;
+  }
+  .user_head{
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin:36px 30px 0 30px;
+    float: left;
+  }
+  .user_head img{
+    width: 100%;
+    height: 100%;
+  }
+  .User_information{
+    float: left;
+    margin-top: 44px;
+  }
+  .User_information p{
+    font-size: 18px;
+    color: #111111;
+  }
+  .User_information p span{
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 14px;
+  }
+  .balance{
+    margin-top: 42px;
+  }
+  .top_right,.top_right_Bound{
+    padding-top: 44px;
+    padding-left: 100px;
+  }
+  .btn{
+    width: 114px;
+    height: 38px;
+    color: #fff;
+    background: #BB1E7B;
+    margin-top: 28px;
+    font-size: 15px;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .Unbound{
+    color: #aaaaaa;
+    display: inline-block;
+    margin-left: 30px;
+  }
+  .ba_icon{
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background: url("/images/new-img/calculus.png")!important;
+    background-size: 18px 18px;
+    z-index: 100;
+    position: absolute;
+    margin-left: 10px;
+
+  }
+  .bound_icon{
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background: url("/images/new-img/alert.png")!important;
+    background-size: 18px 18px;
+    z-index: 100;
+    position: absolute;
+    margin-left: -30px;
+
+  }
+  .user_name{
+    margin-left: 30px;
+  }
+</style>
